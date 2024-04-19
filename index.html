@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Whiskey Drop | Taste a new whiskey every month</title>
-
     <!-- Bootstrap link -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <!-- Fontawesome link -->
     <script src="https://kit.fontawesome.com/43efc26425.js" crossorigin="anonymous"></script>
+    <!-- Style link -->
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
 </head>
 
 <body>
@@ -43,7 +44,7 @@
             <a href="/login">Sign In / Sign Up</a>
         </div>
     </nav>
-    <article class="container mt-3">
+    <!-- <div class="container alert-container">
         <div class="row d-none d-sm-block">
             <div class="col-12">
                 <div class="alert alert-warning">
@@ -52,16 +53,21 @@
                 </div>
             </div>
         </div>
-        <!-- callout -->
+    </div> -->
+
+            <!-- callout -->
+    <div class="container-fluid callout-container">
+        <div class="opaque-overlay">&nbsp;</div>
         <div class="row">
             <div class="col-12">
                 <section class="callout jumbotron text-center">
-                    <h1>The finest whiskeys dilivered to your dorstep.</h1>
+                    <h1 class="jumbotron-header">The finest whiskeys dilivered to your dorstep.</h1>
+                    <hr class="block-divider block-divider--orange">
                     <p class="lead">Sign up today to start receiving the world's best whiskeys every month.
                         <s class="d-none d-sm-inline">€19.99</s>
                         <span class="d-inline d-sm-none"></span>
                         <strong><mark>First one is free!</mark></strong></p>
-                    <button class="btn btn-success btn-lg" data-toggle="modal" data-target="#signUpModal">Sign
+                    <button class="btn btn--cta btn--red btn-lg" data-toggle="modal" data-target="#signUpModal">Sign
                         Up!</button>
                     <p class="text-muted"><small>You must be over 18 to sign up for our service. Please, drink
                             responsibly.</small></p>
@@ -69,9 +75,10 @@
             </div>
         </div>
         <!-- /.callout -->
-        <hr>
+    </div>
 
-        <!-- Quotes -->
+    <!-- Quotes -->
+    <div class="container quotes-container">
         <section class="quotes">
             <div class="row">
                 <div class="col-12 my-5">
@@ -109,9 +116,9 @@
                 </div>
             </div>
         </section>
-        <!-- /.quotes -->
-        <hr>
-
+    </div>
+    <!-- /.quotes -->
+    <div class="features-container">
         <section class="features">
             <div class="row">
                 <div class="col-12 my-5">
@@ -163,42 +170,41 @@
                     </div>
                 </div>
             </div>
-        </section class="monthly-favorites">
-
-        <section>
-            <h2 class="text-uppercase">Monthly Favorites</h2>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">Name</th>
-                        <th scope="col">Origin</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Jameson Irish Whiskey</td>
-                        <td>Ireland</td>
-                    </tr>
-                    <tr>
-                        <td>Bulleit Bourbon</td>
-                        <td>United States</td>
-                    </tr>
-                    <tr>
-                        <td>Jack Daniel's Old No. 7</td>
-                        <td>United States</td>
-                    </tr>
-                    <tr>
-                        <td>Maker's Mark Bourbon Whisky</td>
-                        <td>United States</td>
-                    </tr>
-                    <tr>
-                        <td>Fireball Cinnamon Whisky</td>
-                        <td>United States</td>
-                    </tr>
-                </tbody>
-            </table>
         </section>
-    </article>
+    </div>
+    <section class="monthly-favorites">
+        <h2 class="text-uppercase">Monthly Favorites</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Origin</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Jameson Irish Whiskey</td>
+                    <td>Ireland</td>
+                </tr>
+                <tr>
+                    <td>Bulleit Bourbon</td>
+                    <td>United States</td>
+                </tr>
+                <tr>
+                    <td>Jack Daniel's Old No. 7</td>
+                    <td>United States</td>
+                </tr>
+                <tr>
+                    <td>Maker's Mark Bourbon Whisky</td>
+                    <td>United States</td>
+                </tr>
+                <tr>
+                    <td>Fireball Cinnamon Whisky</td>
+                    <td>United States</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
 
     <!-- Modal -->
 
@@ -226,7 +232,8 @@
                         </div>
                         <div class="form-group">
                             <label for="repeatPassword">Repeat Password</label>
-                            <input type="password" class="form-control" id="repeatPassword" placeholder="Repeat Password">
+                            <input type="password" class="form-control" id="repeatPassword"
+                                placeholder="Repeat Password">
                         </div>
                         <button type="submit" class="btn btn-success">Submit</button>
                     </form>
